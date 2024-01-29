@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AddEditComponent } from './add-edit/add-edit.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'client';
+  title = 'Server side learning';
+  constructor(private _dialog: MatDialog){}
+  openDialogBox() {
+    this._dialog.open(AddEditComponent);
+  }
+  
 }

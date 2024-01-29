@@ -1,0 +1,31 @@
+<div mat-dialog-title>
+ <h1>Agent addition form </h1>
+</div>
+<div mat-dialog-content class="content">
+    <div class="raw">
+        <mat-form-field appearance="outline">
+            <mat-label> Name </mat-label>
+            <input matInput type="text" placeholder="Ex: Sufyaan Ade">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label> Phone </mat-label>
+            <input matInput type="phone" placeholder=" Ex, +254 723 765 898">
+        </mat-form-field>
+    </div>
+    <div class="raw">
+        <mat-form-field appearance="outline">
+            <mat-label> Email </mat-label>
+            <input matInput type="email" placeholder="Ex: Ade@gmail.com">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label> Choose a Date </mat-label>
+            <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>        
+    </div>
+</div>
+<div mat-dialog-actions>
+        <button mat-raised-button> Cancel </button>
+        <button mat-raised-button> Save </button>
+</div>
